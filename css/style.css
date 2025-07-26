@@ -1,0 +1,139 @@
+/* Reset e base */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: #f9fafb;
+  color: #1a202c;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  background-color: #ffffff;
+  padding: 40px 30px;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgb(0 0 0 / 0.1);
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+header h1 {
+  color: #0073e6;
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+header p {
+  margin: 6px 0;
+  font-size: 1rem;
+}
+
+header a {
+  color: #0073e6;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 2px;
+  transition: color 0.3s ease;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+header a:hover,
+header a:focus {
+  color: #0056b3;
+}
+
+header a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #0056b3;
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+header a:hover::after,
+header a:focus::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+header img {
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Sections */
+section {
+  margin-bottom: 40px;
+}
+
+section h2 {
+  color: #0073e6;
+  font-size: 1.75rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+  cursor: default;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+section h2:hover {
+  color: #0056b3;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 24px;
+  color: #2d3748;
+  font-size: 1rem;
+}
+
+ul li {
+  margin-bottom: 8px;
+}
+
+/* Observação - estilo diferenciado */
+.observacao p {
+  font-size: 1rem;
+  color: #4a5568;
+  background-color: #ebf4ff;
+  border-left: 4px solid #0073e6;
+  padding: 15px 20px;
+  border-radius: 4px;
+  line-height: 1.5;
+}
+
+/* Responsividade simples */
+@media (max-width: 600px) {
+  .container {
+    margin: 20px 15px;
+    padding: 30px 20px;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  section h2 {
+    font-size: 1.5rem;
+  }
+}
